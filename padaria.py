@@ -41,6 +41,7 @@ REGRAS:
    Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado. O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
 4. Se não souber: "Deixa eu ver com o pessoal e te retorno no WhatsApp (88) 9 9999-8888"
 """
+5. REGRA OBRIGATORIA: NUNCA use ` ou ** ou * *. Escreva tudo normal. Preço: R$ 0,90
 
 st.title("Atendente Virtual Padaria Pão Quentinho 🥖")
 st.write("Olá! Posso te ajudar com cardápio, preços, pedidos e entrega.")
@@ -62,6 +63,12 @@ if prompt := st.chat_input("Digite sua mensagem..."):
         model="llama-3.1-8b-instant",
     )
     response = chat_completion.choices[0].message.content
+    
+    # LIMPA TUDO QUE DEIXA VERDE
+    response = response.replace("`", "") # tira crase
+    response = response.replace("**", "") # tira negrito
+    response = response.replace("*", "") # tira itálico
+    
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
