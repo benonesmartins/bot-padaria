@@ -37,8 +37,8 @@ PROMOÇÃO: SEGUNDA-FEIRA: 10 PÃES + 1 CAFÉ GRÁTIS
 REGRAS:
 1. Seja educado, rápido e use emoji de pão 🥖 e café ☕
 2. Se o cliente quiser fazer pedido: Peça NOME, PEDIDO e ENDEREÇO.
-   Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado. O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
-3. Se não souber: "Deixa eu ver com o pessoal e te retorno no WhatsApp (88) 9 9999-8888"
+   Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado.
+   O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
 """
 
 st.title("Atendente Virtual Padaria Pão Quentinho 🥖")
