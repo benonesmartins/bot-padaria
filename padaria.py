@@ -62,13 +62,15 @@ if prompt := st.chat_input("Digite sua mensagem..."):
         messages=st.session_state.messages,
         model="llama-3.1-8b-instant",
     )
-    response = chat_completion.choices[0].message.content
     
-    # LIMPA TUDO QUE DEIXA VERDE
-    response = response.replace("`", "") # tira crase
-    response = response.replace("**", "") # tira negrito
-    response = response.replace("*", "") # tira itálico
-    
-    st.session_state.messages.append({"role": "assistant", "content": response})
-    with st.chat_message("assistant"):
-        st.markdown(response)
+response = chat_completion.choices[0].message.content
+
+# FORÇA BRUTA: TIRA TUDO QUE DEIXA VERDE
+response = response.replace("`", "")
+response = response.replace("**", "")
+response = response.replace("*", "")
+response = response.replace("###", "")
+
+st.session_state.messages.append({"role": "assistant", "content": response})
+with st.chat_message("assistant"):
+    st.markdown(response)
