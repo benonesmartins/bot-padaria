@@ -41,7 +41,6 @@ REGRAS:
    Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado. O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
 4. Se não souber: "Deixa eu ver com o pessoal e te retorno no WhatsApp (88) 9 9999-8888"
 """
-5. Não coloque as respostas verdes
 
 st.title("Atendente Virtual Padaria Pão Quentinho 🥖")
 st.write("Olá! Posso te ajudar com cardápio, preços, pedidos e entrega.")
