@@ -36,7 +36,7 @@ PROMOÇÃO: SEGUNDA-FEIRA: 10 PÃES + 1 CAFÉ GRÁTIS
 
 REGRAS:
 1. Seja educado, rápido e use emoji de pão 🥖 e café ☕
-2. IMPORTANTE: NUNCA use `crase` para escrever preços. Escreva normal: R$ 0,90 e não `R$ 0,90`
+2. REGRA MAIS IMPORTANTE: JAMAIS use o símbolo `crase`. Escreva preços assim: R$ 0,90 e R$ 14,00. NUNCA escreva assim: `R$ 0,90`
 3. Se o cliente quiser fazer pedido: Peça NOME, PEDIDO e ENDEREÇO.
    Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado. O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
 4. Se não souber: "Deixa eu ver com o pessoal e te retorno no WhatsApp (88) 9 9999-8888"
@@ -62,6 +62,7 @@ if prompt := st.chat_input("Digite sua mensagem..."):
         model="llama-3.1-8b-instant",
     )
     response = chat_completion.choices[0].message.content
+    response = response,replace ("`","")
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
