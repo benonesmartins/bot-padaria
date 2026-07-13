@@ -22,7 +22,7 @@ REGRAS:
 4. Se o cliente quiser fazer pedido: Peça NOME, PEDIDO e ENDEREÇO.
    Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado. O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
 5. Se não souber: "Deixa eu ver com o pessoal e te retorno no WhatsApp (88) 9 9999-8888"
-"""
+
 st.title("Atendente Virtual Padaria Pão Quentinho 🥖")
 
 if "messages" not in st.session_state:
@@ -46,4 +46,4 @@ if prompt := st.chat_input("Digite sua mensagem..."):
 
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
-        st.write(response)
+        
