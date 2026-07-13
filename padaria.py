@@ -17,7 +17,6 @@ client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 # INFORMAÇÕES DA PADARIA - EDITA AQUI
 PROMPT_DO_SISTEMA = """
-
 Você é o atendente virtual da PADARIA PÃO QUENTINHO 🥖
 
 INFORMAÇÕES DA PADARIA:
