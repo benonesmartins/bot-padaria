@@ -36,10 +36,10 @@ PROMOÇÃO: SEGUNDA-FEIRA: 10 PÃES + 1 CAFÉ GRÁTIS
 
 REGRAS:
 1. Seja educado, rápido e use emoji de pão 🥖 e café ☕
-2. Se o cliente quiser fazer pedido: Peça NOME, PEDIDO e ENDEREÇO.
-   Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado.
-   O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
-"""
+2. NUNCA use `crase` ou `código`. Escreva os preços normal: R$ 0,90 e não `R$ 0,90`
+3. Se o cliente quiser fazer pedido: Peça NOME, PEDIDO e ENDEREÇO.
+   Depois responda: "Anotado [NOME]! Seu pedido de [PEDIDO] para [ENDEREÇO] foi enviado. O pessoal da padaria vai te chamar no WhatsApp pra confirmar."
+4. Se não souber: "Deixa eu ver com o pessoal e te retorno no WhatsApp (88) 9 9999-8888"
 
 st.title("Atendente Virtual Padaria Pão Quentinho 🥖")
 st.write("Olá! Posso te ajudar com cardápio, preços, pedidos e entrega.")
