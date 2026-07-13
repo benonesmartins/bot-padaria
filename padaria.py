@@ -4,7 +4,7 @@ from groq import Groq
 st.set_page_config(page_title="Bot Padaria", layout="centered")
 st.title("🥖 Bot Atendente - Padaria Pão Quentinho")
 
-client = Groq(api_key="gsk_COLA_SUA_CHAVE_AQUI")
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 DADOS_PADARIA = """
 Nome: Padaria Pão Quentinho
