@@ -62,7 +62,6 @@ if prompt := st.chat_input("Digite sua mensagem..."):
         model="llama-3.1-8b-instant",
     )
     response = chat_completion.choices[0].message.content
-   response.replace("", "")
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
